@@ -84,7 +84,7 @@ if($content){
     }
     if($text==="/view2"){
         $a=30;
-    for($i=30; $i<48; $i++){
+    for($i=30; $i<47; $i++){
         $asset = $data['data']['result'][$i]['base_currency'];
         $pair = $data['data']['result'][$i]['quote_currency'];
         $tesPesan = $data['data']['result'][$i]['last_price'];
