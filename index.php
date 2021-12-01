@@ -1,7 +1,7 @@
 <?php
 $content = file_get_contents("php://input");
 if($content){
-    $token = '2114872958:AAG3bepNzPLeJrteJXnHkGVyC50xfhUYnbE';
+    $token = '2114872958:AAG5bepNzPLeJrteJXnHkGVyC50xfhUYnbE';
     
     $apiLink = "https://api.telegram.org/bot$token/";  
     
@@ -23,11 +23,11 @@ if($content){
         for($i=0; $i<15; $i++){
         $asset = $data['data']['result'][$i]['base_currency'];
         $pair = $data['data']['result'][$i]['quote_currency'];
-        $tesPesan = number_format($data['data']['result'][$i]['last_price'],3 , "," , ".");
-        $tesPesan1 = number_format($data['data']['result'][$i]['high'],3 , "," , ".");
-        $tesPesan2 = number_format($data['data']['result'][$i]['low'],3 , "," , ".");
-        $lasthigh = number_format($tesPesan1-$tesPesan,4 , "," , ".");
-        $lastlow = number_format($tesPesan-$tesPesan2,4 , "," , ".");
+        $tesPesan = number_format($data['data']['result'][$i]['last_price'],5 , "," , ".");
+        $tesPesan1 = number_format($data['data']['result'][$i]['high'],5 , "," , ".");
+        $tesPesan2 = number_format($data['data']['result'][$i]['low'],5 , "," , ".");
+        $lasthigh = number_format($tesPesan1-$tesPesan,5 , "," , ".");
+        $lastlow = number_format($tesPesan-$tesPesan2,5 , "," , ".");
         if($tesPesan===$lastlow){
             $status = "Harga Terendah!";
         }
@@ -52,14 +52,14 @@ if($content){
 }
     if($text==="/view1"){
         $a=16;
-    for($i=16; $i<30; $i++){
+    for($i=16; $i<50; $i++){
         $asset = $data['data']['result'][$i]['base_currency'];
         $pair = $data['data']['result'][$i]['quote_currency'];
-        $tesPesan = number_format($data['data']['result'][$i]['last_price'],3 , "," , ".");
-        $tesPesan1 = number_format($data['data']['result'][$i]['high'],3 , "," , ".");
-        $tesPesan2 = number_format($data['data']['result'][$i]['low'],3 , "," , ".");
-        $lasthigh = number_format($tesPesan1-$tesPesan,4 , "," , ".");
-        $lastlow = number_format($tesPesan-$tesPesan2,4 , "," , ".");
+        $tesPesan = number_format($data['data']['result'][$i]['last_price'],5 , "," , ".");
+        $tesPesan1 = number_format($data['data']['result'][$i]['high'],5 , "," , ".");
+        $tesPesan2 = number_format($data['data']['result'][$i]['low'],5 , "," , ".");
+        $lasthigh = number_format($tesPesan1-$tesPesan,5 , "," , ".");
+        $lastlow = number_format($tesPesan-$tesPesan2,5 , "," , ".");
         if($tesPesan===$lastlow){
             $status = "Harga Terendah!";
         }
@@ -83,15 +83,15 @@ if($content){
     file_get_contents($apiLink . "sendmessage?chat_id=$chat_id&text=".$tb."...");
     }
     if($text==="/view2"){
-        $a=30;
-    for($i=30; $i<48; $i++){
+        $a=50;
+    for($i=50; $i<48; $i++){
         $asset = $data['data']['result'][$i]['base_currency'];
         $pair = $data['data']['result'][$i]['quote_currency'];
-        $tesPesan = number_format($data['data']['result'][$i]['last_price'],3 , "," , ".");
-        $tesPesan1 = number_format($data['data']['result'][$i]['high'],3 , "," , ".");
-        $tesPesan2 = number_format($data['data']['result'][$i]['low'],3 , "," , ".");
-        $lasthigh = number_format($tesPesan1-$tesPesan,4 , "," , ".");
-        $lastlow = number_format($tesPesan-$tesPesan2,4 , "," , ".");
+        $tesPesan = number_format($data['data']['result'][$i]['last_price'],5 , "," , ".");
+        $tesPesan1 = number_format($data['data']['result'][$i]['high'],5 , "," , ".");
+        $tesPesan2 = number_format($data['data']['result'][$i]['low'],5 , "," , ".");
+        $lasthigh = number_format($tesPesan1-$tesPesan,5 , "," , ".");
+        $lastlow = number_format($tesPesan-$tesPesan2,5 , "," , ".");
         if($tesPesan===$lastlow){
             $status = "Harga Terendah!";
         }
