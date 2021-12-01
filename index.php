@@ -26,8 +26,8 @@ if($content){
         $tesPesan = number_format($data['data']['result'][$i]['last_price'],3 , "," , ".");
         $tesPesan1 = number_format($data['data']['result'][$i]['high'],3 , "," , ".");
         $tesPesan2 = number_format($data['data']['result'][$i]['low'],3 , "," , ".");
-        $lasthigh = number_format($tesPesan1-$tesPesan,3 , "," , ".");
-        $lastlow = number_format($tesPesan-$tesPesan2,3 , "," , ".");
+        $lasthigh = number_format($tesPesan1-$tesPesan);
+        $lastlow = number_format($tesPesan-$tesPesan2);
         if($tesPesan===$lastlow){
             $status = "Harga Terendah!";
         }
@@ -58,8 +58,8 @@ if($content){
         $tesPesan = number_format($data['data']['result'][$i]['last_price'],3 , "," , ".");
         $tesPesan1 = number_format($data['data']['result'][$i]['high'],3 , "," , ".");
         $tesPesan2 = number_format($data['data']['result'][$i]['low'],3 , "," , ".");
-        $lasthigh = number_format($tesPesan1-$tesPesan,3 , "," , ".");
-        $lastlow = number_format($tesPesan-$tesPesan2,3 , "," , ".");
+        $lasthigh = number_format($tesPesan1-$tesPesan);
+        $lastlow = number_format($tesPesan-$tesPesan2);
         if($tesPesan===$lastlow){
             $status = "Harga Terendah!";
         }
@@ -90,8 +90,8 @@ if($content){
         $tesPesan = number_format($data['data']['result'][$i]['last_price'],3 , "," , ".");
         $tesPesan1 = number_format($data['data']['result'][$i]['high'],3 , "," , ".");
         $tesPesan2 = number_format($data['data']['result'][$i]['low'],3 , "," , ".");
-        $lasthigh = number_format($tesPesan1-$tesPesan,3 , "," , ".");
-        $lastlow = number_format($tesPesan-$tesPesan2,3 , "," , ".");
+        $lasthigh = number_format($tesPesan1-$tesPesan);
+        $lastlow = number_format($tesPesan-$tesPesan2);
         if($tesPesan===$lastlow){
             $status = "Harga Terendah!";
         }
