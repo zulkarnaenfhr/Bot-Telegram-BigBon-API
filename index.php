@@ -3,7 +3,7 @@ $content = file_get_contents("php://input");
 if($content){
     $token = '2114872958:AAG3bepNzPLeJrteJXnHkGVyC50xfhUYnbE';
     
-    $apiLink = "https://api.telegram.org/bot$token/%22";  
+    $apiLink = "https://api.telegram.org/bot$token/";  
     
     echo '<pre>content = '; print_r($content); echo '</pre>';
     $update = json_decode($content, true);
@@ -16,7 +16,7 @@ if($content){
     $sender = $val['message']['from'];
     ?>10april
     <?php 
-    $data = json_decode(file_get_contents("https://api.bingbon.com/api/v1/market/symbols%22")  , TRUE);
+    $data = json_decode(file_get_contents("https://api.bingbon.com/api/v1/market/symbols")  , TRUE);
     $a = 1;
     if($text==="/view"){
         $msg .= "Bot Developed by Kelompok API 7!%0a%0a%0a";
