@@ -1,7 +1,7 @@
 <?php
 $content = file_get_contents("php://input");
 if($content){
-    $token = '2114872958:AAEpeTVx9Mi3G-r_W1i0P-G_mrt6WlPVE1Q';
+    $token = '2114872958:AAG3bepNzPLeJrteJXnHkGVyC50xfhUYnbE';
     
     $apiLink = "https://api.telegram.org/bot$token/%22";  
     
